@@ -56,7 +56,11 @@ public class HomeController {
     @GetMapping("/editar/{id}")
     public String mostrarFormularioEditarCurso(@PathVariable long id, Model model) {
         CursosModel curso = cursoService.obtenerCursoPorId(id);
+
+
         model.addAttribute("cursosModel", curso);
+
+
         return "editarCurso";
     }
 
